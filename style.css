@@ -1,0 +1,341 @@
+/* Configuração Geral e Resets */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #1a2a3a; /* Fundo Azul Escuro */
+    color: #e0e6ed;
+    line-height: 1.6;
+    padding: 20px;
+}
+
+/* Todos os Títulos em Verde */
+h1, h2, h3 {
+    color: #2ecc71; /* Cor Verde */
+    margin-bottom: 12px;
+}
+
+/* Cabeçalho */
+.cabecalho {
+    background-color: #0f172a;
+    padding: 25px;
+    border-radius: 10px;
+    text-align: center;
+    border-bottom: 3px solid #2ecc71;
+    margin-bottom: 25px;
+}
+
+.subtitulo {
+    color: #94a3b8;
+    font-style: italic;
+    margin-bottom: 15px;
+}
+
+/* Navegação */
+.menu ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 15px;
+    margin-top: 10px;
+}
+
+.menu a {
+    color: #38bdf8;
+    text-decoration: none;
+    font-weight: bold;
+    padding: 6px 12px;
+    border: 1px solid #38bdf8;
+    border-radius: 5px;
+    transition: 0.3s;
+}
+
+.menu a:hover {
+    background-color: #2ecc71;
+    color: #0f172a;
+    border-color: #2ecc71;
+}
+
+/* Layout Principal */
+.conteudo-principal {
+    max-width: 900px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+/* Cards de Conteúdo (Box Model) */
+.card {
+    background-color: #243447; /* Tom de azul complementar */
+    padding: 25px;
+    border-radius: 8px;
+    border-left: 5px solid #2ecc71;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+}
+
+.card p {
+    margin-bottom: 12px;
+}
+
+.card ul {
+    margin-left: 20px;
+    margin-bottom: 15px;
+}
+
+.card li {
+    margin-bottom: 6px;
+}
+
+/* Imagem e Legenda */
+.banner-imagem figure {
+    background-color: #243447;
+    padding: 15px;
+    border-radius: 8px;
+    text-align: center;
+}
+
+.banner-imagem img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 6px;
+}
+
+figcaption {
+    font-size: 0.9rem;
+    color: #cbd5e1;
+    margin-top: 8px;
+    font-style: italic;
+}
+/* ==================== ESTILOS ISOLADOS DO JOGO DE RECICLAGEM ==================== */
+#secao-jogo-reciclagem {
+  width: 100%;
+  padding: 50px 20px;
+  background-color: #f1f8e9;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  box-sizing: border-box;
+}
+
+#secao-jogo-reciclagem * {
+  box-sizing: border-box;
+}
+
+#secao-jogo-reciclagem .recicla-card {
+  max-width: 720px;
+  margin: 0 auto;
+  background: #ffffff;
+  border-radius: 18px;
+  padding: 32px 24px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
+  text-align: center;
+}
+
+#secao-jogo-reciclagem .recicla-topo h2 {
+  color: #2e7d32;
+  font-size: 1.65rem;
+  margin: 0 0 8px 0;
+}
+
+#secao-jogo-reciclagem .recicla-topo p {
+  color: #555555;
+  font-size: 1rem;
+  margin: 0 0 22px 0;
+}
+
+/* Oculta os inputs de controle */
+#secao-jogo-reciclagem input[type="radio"] {
+  display: none;
+}
+
+/* Controle de exibição das etapas */
+#secao-jogo-reciclagem .recicla-round {
+  display: none;
+  animation: reciclaFade 0.3s ease;
+}
+
+@keyframes reciclaFade {
+  from { opacity: 0; transform: translateY(6px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+#rec-stage-1:checked ~ .rec-r1,
+#rec-stage-2:checked ~ .rec-r2,
+#rec-stage-3:checked ~ .rec-r3,
+#rec-stage-4:checked ~ .rec-r4,
+#rec-stage-fim:checked ~ .rec-fim {
+  display: block;
+}
+
+#secao-jogo-reciclagem .recicla-badge {
+  display: inline-block;
+  background: #e8f5e9;
+  color: #2e7d32;
+  font-weight: 700;
+  font-size: 0.85rem;
+  padding: 5px 14px;
+  border-radius: 20px;
+  margin-bottom: 16px;
+}
+
+#secao-jogo-reciclagem .recicla-lixo {
+  background: #fafafa;
+  border: 2px dashed #90a4ae;
+  border-radius: 14px;
+  padding: 18px;
+  max-width: 240px;
+  margin: 0 auto 24px auto;
+}
+
+#secao-jogo-reciclagem .recicla-emoji {
+  font-size: 3.6rem;
+  display: block;
+  line-height: 1.1;
+  margin-bottom: 8px;
+}
+
+#secao-jogo-reciclagem .recicla-lixo h3 {
+  margin: 0;
+  font-size: 1.15rem;
+  color: #222222;
+}
+
+#secao-jogo-reciclagem .recicla-lixeiras {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 12px;
+}
+
+#secao-jogo-reciclagem .rec-bin {
+  height: 130px;
+  border-radius: 12px;
+  color: #ffffff;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
+  cursor: pointer;
+  box-shadow: 0 5px 12px rgba(0, 0, 0, 0.14);
+  transition: transform 0.2s, filter 0.2s;
+  user-select: none;
+}
+
+#secao-jogo-reciclagem .rec-bin:hover {
+  transform: translateY(-5px);
+  filter: brightness(1.08);
+}
+
+#secao-jogo-reciclagem .rec-bin span {
+  font-size: 2.1rem;
+}
+
+#secao-jogo-reciclagem .rec-bin strong {
+  font-size: 0.95rem;
+  letter-spacing: 0.5px;
+}
+
+#secao-jogo-reciclagem .rec-azul { background-color: #1976d2; }
+#secao-jogo-reciclagem .rec-vermelho { background-color: #d32f2f; }
+#secao-jogo-reciclagem .rec-amarelo { background-color: #fbc02d; color: #222222; }
+#secao-jogo-reciclagem .rec-verde { background-color: #388e3c; }
+
+#secao-jogo-reciclagem .recicla-feedback {
+  display: none;
+  margin-top: 20px;
+  padding: 14px;
+  border-radius: 10px;
+  font-weight: 600;
+  font-size: 1rem;
+}
+
+#secao-jogo-reciclagem .rec-erro {
+  background: #ffebee;
+  color: #c62828;
+  border: 1px solid #ef9a9a;
+}
+
+#secao-jogo-reciclagem .rec-acerto {
+  background: #e8f5e9;
+  color: #2e7d32;
+  border: 1px solid #a5d6a7;
+}
+
+/* Regras de acerto e erro */
+#secao-jogo-reciclagem .rec-opt-err:checked ~ .rec-erro {
+  display: block;
+}
+
+#secao-jogo-reciclagem .rec-opt-ok:checked ~ .rec-acerto {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 12px;
+}
+
+#secao-jogo-reciclagem .rec-opt-ok:checked ~ .recicla-lixeiras .rec-bin {
+  pointer-events: none;
+  opacity: 0.55;
+}
+
+#secao-jogo-reciclagem .recicla-btn {
+  display: inline-block;
+  background-color: #2e7d32;
+  color: #ffffff;
+  padding: 10px 22px;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: 700;
+  font-size: 0.95rem;
+  transition: background 0.2s;
+}
+
+#secao-jogo-reciclagem .recicla-btn:hover {
+  background-color: #1b5e20;
+}
+
+#secao-jogo-reciclagem .recicla-trofeu {
+  font-size: 4rem;
+  display: block;
+  margin-bottom: 10px;
+}
+
+#secao-jogo-reciclagem .rec-fim h3 {
+  color: #2e7d32;
+  font-size: 1.4rem;
+  margin: 0 0 8px 0;
+}
+
+#secao-jogo-reciclagem .rec-fim p {
+  color: #555555;
+  margin: 0 0 20px 0;
+}
+
+@media (max-width: 560px) {
+  #secao-jogo-reciclagem .recicla-lixeiras {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+/* Rodapé */
+.rodape {
+    text-align: center;
+    padding: 20px;
+    margin-top: 30px;
+    background-color: #0f172a;
+    border-radius: 8px;
+    font-size: 0.85rem;
+    color: #94a3b8;
+}
+
+/* Responsividade simples */
+@media (max-width: 600px) {
+    .menu ul {
+        flex-direction: column;
+        align-items: center;
+    }
+}
